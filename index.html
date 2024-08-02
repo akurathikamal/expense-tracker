@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>EXPENSE TRACKER</h1>
+    <div id="select">
+      <input type="text" placeholder="item" class="item">
+      <input type="number" placeholder="cost" class="cost">
+      <select value="food" class="select" id="select">
+        <option value="FOOD">FOOD</option>
+        <option value="TRANSPORT">TRANSPORT</option>
+        <option value="DRINKS">DRINKS</option>
+      </select>
+      <input type="date" class="date">
+      <button type="submit" class="button">ADD EXPENSE</button>
+    </div>
+    <table>
+      <tr>
+        <th>Expense Name</th>
+        <th>Amount</th>
+        <th>Category</th>
+        <th>Date</th>
+        <th>Action</th>
+      </tr>
+      <tbody id="expense-table">
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Total Cost</td>
+          <td id="total-cost">0</td>
+        </tr>
+      </tfoot>
+    </table>
+    <footer>
+      <label for="filter">
+        Filter by Category:
+      </label>
+      <select name="filter" class="filter" id="filter-category" onchange="filterExpenses()">
+        <option value="ALL">ALL</option>
+        <option value="FOOD">FOOD</option>
+        <option value="TRANSPORT">TRANSPORT</option>
+        <option value="DRINKS">DRINKS</option>
+      </select>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
